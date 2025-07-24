@@ -19,15 +19,17 @@ function resetGame() {
     moves = 0;
     matchedPairs = 0;
     document.getElementById('moves').textContent = moves;
-    document.querySelectorAll('.card').forEach(card => {
-        card.classList.remove('flipped', 'matched');
-    });
+    document.getElementById('winModal').style.display = 'none';
     shuffleCards();
 }
 
 document.querySelectorAll('.card').forEach(card => {
     card.addEventListener('click', () => {
         if (flippedCards.length < 2 && !card.classList.contains('flipped') && !card.classList.contains('matched')) {
+            const flipSound = document.getElementById('flipSound');
+            flipSound.currentTime = 0;
+            flipSound.play().catch(error => console.log('Audio play failed:', error));
+
             card.classList.add('flipped');
             flippedCards.push(card);
             if (flippedCards.length === 2) {
@@ -40,7 +42,7 @@ document.querySelectorAll('.card').forEach(card => {
                     matchedPairs++;
                     flippedCards = [];
                     if (matchedPairs === 8) {
-                        alert('Congratulations! You won!');
+                        document.getElementById('winModal').style.display = 'flex';
                     }
                 } else {
                     setTimeout(() => {

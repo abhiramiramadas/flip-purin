@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flip & Purin</title>
     <link rel="stylesheet" href="style1.css">
+    <link rel="icon" type="image/x-icon" href="assets/logo.png">
 </head>
 <body>
     <div class="header">
@@ -16,7 +17,6 @@
     </div>
     <div class="moves">Moves: <span id="moves">0</span></div>
     <div class="game-board">
-        <!-- 16 cards with pairs of 8 images -->
         <div class="card" data-image="frog">
             <div class="card-inner">
                 <div class="card-front"><img src="assets/frog.png" alt="Frog"></div>
@@ -65,13 +65,13 @@
                 <div class="card-back"><img src="assets/front.png" alt="Card Back"></div>
             </div>
         </div>
-        <div class="card" data-image="cinammon">
+        <div class="card" data-image="cinnamon">
             <div class="card-inner">
                 <div class="card-front"><img src="assets/cinammon.png" alt="Cinnamon"></div>
                 <div class="card-back"><img src="assets/front.png" alt="Card Back"></div>
             </div>
         </div>
-        <div class="card" data-image="cinammon">
+        <div class="card" data-image="cinnamon">
             <div class="card-inner">
                 <div class="card-front"><img src="assets/cinammon.png" alt="Cinnamon"></div>
                 <div class="card-back"><img src="assets/front.png" alt="Card Back"></div>
@@ -112,6 +112,12 @@
                 <div class="card-front"><img src="assets/pippo.png" alt="Pippo"></div>
                 <div class="card-back"><img src="assets/front.png" alt="Card Back"></div>
             </div>
+        </div>
+    </div>
+    <audio id="flipSound" src="assets/flip.mp3" preload="auto"></audio>
+    <div class="modal" id="winModal">
+        <div class="modal-content">
+            <div class="modal-button" onclick="resetGame()" tabindex="0">Play Again</div>
         </div>
     </div>
     <script src="script.js"></script>
