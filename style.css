@@ -1,0 +1,107 @@
+/* === General Reset === */
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #F0CADD;
+    font-family: 'Pixelify Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* === Main Container === */
+.start-container {
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* === Ellipse Background Glow === */
+.ellipse-blur {
+    position: absolute;
+    width: 909px;
+    height: 909px;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(240, 173, 206, 0.44);
+    border: 7px solid #F036C1;
+    filter: blur(25px);
+    border-radius: 50%;
+    z-index: 0;
+}
+
+/* === Game Title === */
+.game-title {
+    position: relative;
+    width: 100%;
+    font-size: 224px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-align: center;
+    color: #FEF2BC;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.57);
+    z-index: 1;
+    margin-top: 120px;
+}
+
+/* === Tagline === */
+.tagline {
+    position: relative;
+    font-size: 50px;
+    line-height: 60px;
+    color: #FFFFFF;
+    text-align: center;
+    z-index: 1;
+    margin-top: 10px;
+}
+
+/* === Reset Button Frame === */
+.reset-frame {
+    position: relative;
+    width: 211px;
+    height: 73px;
+    background: #F0ADCE;
+    border-radius: 20px;
+    margin: 50px auto 0;
+    z-index: 1;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.reset-frame:hover {
+    background-color: #F0CADD;
+}
+
+/* === RESET Text === */
+.reset-text {
+    position: absolute;
+    left: 40px;
+    top: 11px;
+    font-size: 44px;
+    line-height: 53px;
+    color: #AB7590;
+}
+
+/* === Start Button === */
+.start-button {
+    position: absolute;
+    left: 40px;
+    top: 11px;
+    font-size: 44px;
+    line-height: 53px;
+    color: #AB7590;
+    text-decoration: none;
+    font-family: 'Pixelify Sans', sans-serif;
+    transition: color 0.3s;
+}
+
+.start-button:hover {
+    color: #FFFFFF;
+}
